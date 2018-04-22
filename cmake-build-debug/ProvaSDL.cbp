@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ProvaSDL"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ProvaSDL">
+				<Option output="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/ProvaSDL" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProvaSDL"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ProvaSDL/fast">
+				<Option output="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/ProvaSDL" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProvaSDL/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/main.cpp">
+			<Option target="ProvaSDL"/>
+		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake/FindSDL2.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake/FindSDL2_image.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
