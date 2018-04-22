@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ProvaSDL.dir/main.cpp.o"
+  "CMakeFiles/ProvaSDL.dir/Game.cpp.o"
   "ProvaSDL.pdb"
   "ProvaSDL"
 )

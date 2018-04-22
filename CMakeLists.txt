@@ -12,6 +12,6 @@ set(SDL_LIBRARY_TEMP ${SDL2_LIBRARY})
 
 
 
-add_executable(ProvaSDL main.cpp)
+add_executable(ProvaSDL main.cpp Game.cpp Game.h)
 target_link_libraries(ProvaSDL ${SDL2_LIBRARY_TEMP} ${SDL2_IMAGE_LIBRARIES})
 

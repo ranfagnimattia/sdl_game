@@ -86,6 +86,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.cpp">
+			<Option target="ProvaSDL"/>
+		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.h">
+			<Option target="ProvaSDL"/>
+		</Unit>
 		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/main.cpp">
 			<Option target="ProvaSDL"/>
 		</Unit>
