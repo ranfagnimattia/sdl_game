@@ -4,9 +4,9 @@
 
 #include "Game.h"
 #include "TextureManager.h"
+#include "GameObject.h"
 
-SDL_Texture* playerTex;
-SDL_Rect srcR,destR1,destR2;
+GameObject* player;
 Game::Game() {
 }
 Game::~Game() {
@@ -28,7 +28,7 @@ void Game::init(const char* title,int xpos,int ypos,int width,int height,bool fu
         isRunning = false;
 
     }
-    playerTex = TextureManager::LoadTexture("../images/sprite1.png",renderer);
+    player = new GameObject("../images/sprite1.png",renderer);
 }
 
 void Game::handleEvents() {
@@ -46,28 +46,16 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
+    player->Update();
+
     count++;
-    destR1.y = 250;
-    destR2.y = 250;
-    destR1.h = 64;
-    destR2.h = 64;
-    destR1.w = 64;
-    destR2.w = 64;
-    if(destR1.x >= 500)
-        destR1.x = 0;
-    if(destR2.x >= 500)
-        destR2.x = 0;
-    if(abs(destR1.x-destR2.x)> 20)
-        destR2.x+=1;
-    destR1.x+=2;
     std::cout << count << std::endl;
 }
 
 void Game::render() {
     SDL_RenderClear(renderer);
     //where we put stuff to render
-    SDL_RenderCopy(renderer,playerTex,NULL,&destR1); //primo null usa tutta l'immagine per la texture, il secondo null inserisce l'immagine sull'intera finestra
-    SDL_RenderCopy(renderer,playerTex,NULL,&destR2); //primo null usa tutta l'immagine per la texture, il secondo null inserisce l'immagine sull'intera finestra
+    player->Render();
     SDL_RenderPresent(renderer);
 }
 
