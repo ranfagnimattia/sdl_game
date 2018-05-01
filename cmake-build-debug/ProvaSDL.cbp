@@ -92,6 +92,18 @@
 		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.h">
 			<Option target="ProvaSDL"/>
 		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/GameObject.cpp">
+			<Option target="ProvaSDL"/>
+		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/GameObject.h">
+			<Option target="ProvaSDL"/>
+		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.cpp">
+			<Option target="ProvaSDL"/>
+		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.h">
+			<Option target="ProvaSDL"/>
+		</Unit>
 		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/main.cpp">
 			<Option target="ProvaSDL"/>
 		</Unit>

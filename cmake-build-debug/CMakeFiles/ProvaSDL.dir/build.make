@@ -105,22 +105,74 @@ CMakeFiles/ProvaSDL.dir/Game.cpp.o.provides: CMakeFiles/ProvaSDL.dir/Game.cpp.o.
 CMakeFiles/ProvaSDL.dir/Game.cpp.o.provides.build: CMakeFiles/ProvaSDL.dir/Game.cpp.o
 
 
+CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o: CMakeFiles/ProvaSDL.dir/flags.make
+CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o: ../TextureManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o -c /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.cpp
+
+CMakeFiles/ProvaSDL.dir/TextureManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProvaSDL.dir/TextureManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.cpp > CMakeFiles/ProvaSDL.dir/TextureManager.cpp.i
+
+CMakeFiles/ProvaSDL.dir/TextureManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProvaSDL.dir/TextureManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.cpp -o CMakeFiles/ProvaSDL.dir/TextureManager.cpp.s
+
+CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o.requires
+
+CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o.provides: CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ProvaSDL.dir/build.make CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o.provides.build
+.PHONY : CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o.provides
+
+CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o.provides.build: CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o
+
+
+CMakeFiles/ProvaSDL.dir/GameObject.cpp.o: CMakeFiles/ProvaSDL.dir/flags.make
+CMakeFiles/ProvaSDL.dir/GameObject.cpp.o: ../GameObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProvaSDL.dir/GameObject.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProvaSDL.dir/GameObject.cpp.o -c /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/GameObject.cpp
+
+CMakeFiles/ProvaSDL.dir/GameObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProvaSDL.dir/GameObject.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/GameObject.cpp > CMakeFiles/ProvaSDL.dir/GameObject.cpp.i
+
+CMakeFiles/ProvaSDL.dir/GameObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProvaSDL.dir/GameObject.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/GameObject.cpp -o CMakeFiles/ProvaSDL.dir/GameObject.cpp.s
+
+CMakeFiles/ProvaSDL.dir/GameObject.cpp.o.requires:
+
+.PHONY : CMakeFiles/ProvaSDL.dir/GameObject.cpp.o.requires
+
+CMakeFiles/ProvaSDL.dir/GameObject.cpp.o.provides: CMakeFiles/ProvaSDL.dir/GameObject.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ProvaSDL.dir/build.make CMakeFiles/ProvaSDL.dir/GameObject.cpp.o.provides.build
+.PHONY : CMakeFiles/ProvaSDL.dir/GameObject.cpp.o.provides
+
+CMakeFiles/ProvaSDL.dir/GameObject.cpp.o.provides.build: CMakeFiles/ProvaSDL.dir/GameObject.cpp.o
+
+
 # Object files for target ProvaSDL
 ProvaSDL_OBJECTS = \
 "CMakeFiles/ProvaSDL.dir/main.cpp.o" \
-"CMakeFiles/ProvaSDL.dir/Game.cpp.o"
+"CMakeFiles/ProvaSDL.dir/Game.cpp.o" \
+"CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o" \
+"CMakeFiles/ProvaSDL.dir/GameObject.cpp.o"
 
 # External object files for target ProvaSDL
 ProvaSDL_EXTERNAL_OBJECTS =
 
 ProvaSDL: CMakeFiles/ProvaSDL.dir/main.cpp.o
 ProvaSDL: CMakeFiles/ProvaSDL.dir/Game.cpp.o
+ProvaSDL: CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o
+ProvaSDL: CMakeFiles/ProvaSDL.dir/GameObject.cpp.o
 ProvaSDL: CMakeFiles/ProvaSDL.dir/build.make
 ProvaSDL: /usr/lib/x86_64-linux-gnu/libSDL2main.a
 ProvaSDL: /usr/lib/x86_64-linux-gnu/libSDL2.so
 ProvaSDL: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 ProvaSDL: CMakeFiles/ProvaSDL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ProvaSDL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ProvaSDL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ProvaSDL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -130,6 +182,8 @@ CMakeFiles/ProvaSDL.dir/build: ProvaSDL
 
 CMakeFiles/ProvaSDL.dir/requires: CMakeFiles/ProvaSDL.dir/main.cpp.o.requires
 CMakeFiles/ProvaSDL.dir/requires: CMakeFiles/ProvaSDL.dir/Game.cpp.o.requires
+CMakeFiles/ProvaSDL.dir/requires: CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o.requires
+CMakeFiles/ProvaSDL.dir/requires: CMakeFiles/ProvaSDL.dir/GameObject.cpp.o.requires
 
 .PHONY : CMakeFiles/ProvaSDL.dir/requires
 

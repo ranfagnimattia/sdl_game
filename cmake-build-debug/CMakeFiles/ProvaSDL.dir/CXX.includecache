@@ -9,6 +9,8 @@
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.cpp
 Game.h
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.h
+TextureManager.h
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.h
 
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.h
 SDL2/SDL.h
@@ -17,6 +19,14 @@ SDL_image.h
 -
 iostream
 -
+
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.cpp
+TextureManager.h
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.h
+
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.h
+Game.h
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.h
 
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/main.cpp
 Game.h

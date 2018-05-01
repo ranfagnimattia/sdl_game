@@ -150,6 +150,60 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles/ProvaSDL.dir/build.make CMakeFiles/ProvaSDL.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
+GameObject.o: GameObject.cpp.o
+
+.PHONY : GameObject.o
+
+# target to build an object file
+GameObject.cpp.o:
+	$(MAKE) -f CMakeFiles/ProvaSDL.dir/build.make CMakeFiles/ProvaSDL.dir/GameObject.cpp.o
+.PHONY : GameObject.cpp.o
+
+GameObject.i: GameObject.cpp.i
+
+.PHONY : GameObject.i
+
+# target to preprocess a source file
+GameObject.cpp.i:
+	$(MAKE) -f CMakeFiles/ProvaSDL.dir/build.make CMakeFiles/ProvaSDL.dir/GameObject.cpp.i
+.PHONY : GameObject.cpp.i
+
+GameObject.s: GameObject.cpp.s
+
+.PHONY : GameObject.s
+
+# target to generate assembly for a file
+GameObject.cpp.s:
+	$(MAKE) -f CMakeFiles/ProvaSDL.dir/build.make CMakeFiles/ProvaSDL.dir/GameObject.cpp.s
+.PHONY : GameObject.cpp.s
+
+TextureManager.o: TextureManager.cpp.o
+
+.PHONY : TextureManager.o
+
+# target to build an object file
+TextureManager.cpp.o:
+	$(MAKE) -f CMakeFiles/ProvaSDL.dir/build.make CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o
+.PHONY : TextureManager.cpp.o
+
+TextureManager.i: TextureManager.cpp.i
+
+.PHONY : TextureManager.i
+
+# target to preprocess a source file
+TextureManager.cpp.i:
+	$(MAKE) -f CMakeFiles/ProvaSDL.dir/build.make CMakeFiles/ProvaSDL.dir/TextureManager.cpp.i
+.PHONY : TextureManager.cpp.i
+
+TextureManager.s: TextureManager.cpp.s
+
+.PHONY : TextureManager.s
+
+# target to generate assembly for a file
+TextureManager.cpp.s:
+	$(MAKE) -f CMakeFiles/ProvaSDL.dir/build.make CMakeFiles/ProvaSDL.dir/TextureManager.cpp.s
+.PHONY : TextureManager.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -189,6 +243,12 @@ help:
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
+	@echo "... GameObject.o"
+	@echo "... GameObject.i"
+	@echo "... GameObject.s"
+	@echo "... TextureManager.o"
+	@echo "... TextureManager.i"
+	@echo "... TextureManager.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
