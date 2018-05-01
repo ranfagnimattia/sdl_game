@@ -3,6 +3,9 @@
 //
 
 #include "Game.h"
+
+SDL_Texture* playerTex;
+
 Game::Game() {
 
 }
@@ -25,8 +28,9 @@ void Game::init(const char* title,int xpos,int ypos,int width,int height,bool fu
         isRunning = false;
 
     }
-
-
+    SDL_Surface* tmpSurface = IMG_Load("../images/sprite1.png");
+    playerTex = SDL_CreateTextureFromSurface(renderer,tmpSurface);
+    SDL_FreeSurface(tmpSurface);
 
 }
 
@@ -52,6 +56,7 @@ void Game::update() {
 void Game::render() {
     SDL_RenderClear(renderer);
     //where we put stuff to render
+    SDL_RenderCopy(renderer,playerTex,NULL,NULL); //primo null usa tutta l'immagine per la texture, il secondo null inserisce l'immagine sull'intera finestra
     SDL_RenderPresent(renderer);
 }
 

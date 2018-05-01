@@ -5,6 +5,7 @@
 #ifndef PROVASDL_GAME_H
 #define PROVASDL_GAME_H
 #include<SDL2/SDL.h>
+#include <SDL_image.h>
 #include<iostream>
 
 class Game {
