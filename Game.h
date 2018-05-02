@@ -14,7 +14,7 @@ public:
     ~Game();
 
     void init(const char* title,int xpos,int ypos,int width,int height,bool fullscreen);
-    void update();
+    void update(float dt);
     void render();
     void clean(); //avoid memory leak and optimize
 

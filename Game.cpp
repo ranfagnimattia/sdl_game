@@ -7,6 +7,9 @@
 #include "GameObject.h"
 
 GameObject* player;
+GameObject* enemy;
+bool touch;
+float accumulator = 0;
 Game::Game() {
 }
 Game::~Game() {
@@ -28,7 +31,9 @@ void Game::init(const char* title,int xpos,int ypos,int width,int height,bool fu
         isRunning = false;
 
     }
-    player = new GameObject("../images/sprite1.png",renderer);
+    player = new GameObject("../images/sprite1.png",renderer,150,150);
+    enemy = new GameObject("../images/sprite2.png",renderer,100,150,2);
+    touch=false;
 }
 
 void Game::handleEvents() {
@@ -45,9 +50,31 @@ void Game::handleEvents() {
     }
 }
 
-void Game::update() {
+void Game::update(float dt) {
     player->Update();
+    enemy->Update();
+    if(abs(player->getXpos()-enemy->getXpos()) <= 30 && abs(player->getYpos()-enemy->getYpos()) <= 30) {
 
+        accumulator += dt;
+        if(accumulator > 0.5){
+            player->setObjTexture(TextureManager::LoadTexture("../images/sprite3.png",renderer));
+
+        }else if(accumulator > 1){
+            accumulator -= 1;
+            player->setObjTexture(TextureManager::LoadTexture("../images/sprite1.png",renderer));
+
+        }
+        enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite4.png",renderer));
+        enemy->setSpeed(1);
+        player->setSpeed(0);
+    }
+    else {
+        touch=false;
+        player->setObjTexture(TextureManager::LoadTexture("../images/sprite1.png",renderer));
+        enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite2.png",renderer));
+        player->setSpeed(1);
+        enemy->setSpeed(2);
+    }
     count++;
     std::cout << count << std::endl;
 }
@@ -56,6 +83,7 @@ void Game::render() {
     SDL_RenderClear(renderer);
     //where we put stuff to render
     player->Render();
+    enemy->Render();
     SDL_RenderPresent(renderer);
 }
 

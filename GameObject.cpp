@@ -4,12 +4,16 @@
 
 #include "GameObject.h"
 #include "TextureManager.h"
-GameObject::GameObject(const char *texturesheet, SDL_Renderer *ren, int x,int y): renderer(ren),objTexture(TextureManager::LoadTexture(texturesheet,ren)),xpos(x),ypos(y){
+GameObject::GameObject(const char *texturesheet, SDL_Renderer *ren, int x,int y,float spd): renderer(ren),objTexture(TextureManager::LoadTexture(texturesheet,ren)),xpos(x),ypos(y), speed(spd){
 }
 
 void GameObject::Update() {
-    xpos++;
-    ypos++;
+    xpos+=speed;
+    //ypos+=speed;
+    if(xpos>=500)
+        xpos=0;
+    if(ypos>=500)
+        ypos=0;
 
     srcRect.h=32;
     srcRect.w=32;
@@ -24,4 +28,20 @@ void GameObject::Update() {
 
 void GameObject::Render() {
     SDL_RenderCopy(renderer,objTexture,&srcRect,&destRect);
+}
+
+int GameObject::getXpos() const {
+    return xpos;
+}
+
+int GameObject::getYpos() const {
+    return ypos;
+}
+
+void GameObject::setObjTexture(SDL_Texture *objTexture) {
+    GameObject::objTexture = objTexture;
+}
+
+void GameObject::setSpeed(float speed) {
+    GameObject::speed = speed;
 }
