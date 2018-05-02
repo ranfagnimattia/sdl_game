@@ -53,18 +53,19 @@ void Game::handleEvents() {
 void Game::update(float dt) {
     player->Update();
     enemy->Update();
-    if(abs(player->getXpos()-enemy->getXpos()) <= 30 && abs(player->getYpos()-enemy->getYpos()) <= 30) {
+    if(abs(player->getXpos()-enemy->getXpos()) <= 50 && abs(player->getYpos()-enemy->getYpos()) <= 50) {
 
         accumulator += dt;
-        if(accumulator > 0.5){
+        if(accumulator > 0.2){
             player->setObjTexture(TextureManager::LoadTexture("../images/sprite3.png",renderer));
-
-        }else if(accumulator > 1){
-            accumulator -= 1;
+            enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite4.png",renderer));
+        }
+        if(accumulator > 0.4){
+            accumulator -= 0.4;
             player->setObjTexture(TextureManager::LoadTexture("../images/sprite1.png",renderer));
+            enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite2.png",renderer));
 
         }
-        enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite4.png",renderer));
         enemy->setSpeed(1);
         player->setSpeed(0);
     }

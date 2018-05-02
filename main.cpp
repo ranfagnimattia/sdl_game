@@ -13,7 +13,7 @@ int main(int argc,const char* args[]) {
         frameStart = SDL_GetTicks();
 
         game->handleEvents();
-        game->update(frameTime);
+        game->update(frameTime /60);
         game->render();
         //per vedere tempo trascorso a fare render e tutto
         frameTime = SDL_GetTicks() - frameStart;
