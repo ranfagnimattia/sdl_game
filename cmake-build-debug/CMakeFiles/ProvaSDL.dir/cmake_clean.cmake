@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProvaSDL.dir/Game.cpp.o"
   "CMakeFiles/ProvaSDL.dir/TextureManager.cpp.o"
   "CMakeFiles/ProvaSDL.dir/GameObject.cpp.o"
+  "CMakeFiles/ProvaSDL.dir/Map.cpp.o"
   "ProvaSDL.pdb"
   "ProvaSDL"
 )

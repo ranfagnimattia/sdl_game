@@ -5,9 +5,12 @@
 #include "Game.h"
 #include "TextureManager.h"
 #include "GameObject.h"
-
+#include "Map.h"
 GameObject* player;
 GameObject* enemy;
+Map* map;
+SDL_Renderer* Game::renderer = nullptr;
+
 bool touch;
 float accumulator = 0;
 Game::Game() {
@@ -31,8 +34,9 @@ void Game::init(const char* title,int xpos,int ypos,int width,int height,bool fu
         isRunning = false;
 
     }
-    player = new GameObject("../images/sprite1.png",renderer,150,150);
-    enemy = new GameObject("../images/sprite2.png",renderer,100,150,2);
+    player = new GameObject("../images/sprite1.png",150,150);
+    enemy = new GameObject("../images/sprite2.png",100,150,2);
+    map= new Map();
     touch=false;
 }
 
@@ -51,19 +55,20 @@ void Game::handleEvents() {
 }
 
 void Game::update(float dt) {
+    //map->LoadMap();
     player->Update();
     enemy->Update();
     if(abs(player->getXpos()-enemy->getXpos()) <= 50 && abs(player->getYpos()-enemy->getYpos()) <= 50) {
 
         accumulator += dt;
         if(accumulator > 0.2){
-            player->setObjTexture(TextureManager::LoadTexture("../images/sprite3.png",renderer));
-            enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite4.png",renderer));
+            player->setObjTexture(TextureManager::LoadTexture("../images/sprite3.png"));
+            enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite4.png"));
         }
         if(accumulator > 0.4){
             accumulator -= 0.4;
-            player->setObjTexture(TextureManager::LoadTexture("../images/sprite1.png",renderer));
-            enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite2.png",renderer));
+            player->setObjTexture(TextureManager::LoadTexture("../images/sprite1.png"));
+            enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite2.png"));
 
         }
         enemy->setSpeed(1);
@@ -71,8 +76,8 @@ void Game::update(float dt) {
     }
     else {
         touch=false;
-        player->setObjTexture(TextureManager::LoadTexture("../images/sprite1.png",renderer));
-        enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite2.png",renderer));
+        player->setObjTexture(TextureManager::LoadTexture("../images/sprite1.png"));
+        enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite2.png"));
         player->setSpeed(1);
         enemy->setSpeed(2);
     }
@@ -83,6 +88,7 @@ void Game::update(float dt) {
 void Game::render() {
     SDL_RenderClear(renderer);
     //where we put stuff to render
+    map->DrawMap();
     player->Render();
     enemy->Render();
     SDL_RenderPresent(renderer);

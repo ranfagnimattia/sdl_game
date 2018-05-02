@@ -98,6 +98,12 @@
 		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/GameObject.h">
 			<Option target="ProvaSDL"/>
 		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Map.cpp">
+			<Option target="ProvaSDL"/>
+		</Unit>
+		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Map.h">
+			<Option target="ProvaSDL"/>
+		</Unit>
 		<Unit filename="/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.cpp">
 			<Option target="ProvaSDL"/>
 		</Unit>

@@ -13,6 +13,8 @@ TextureManager.h
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.h
 GameObject.h
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/GameObject.h
+Map.h
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Map.h
 
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.h
 SDL2/SDL.h
@@ -29,6 +31,16 @@ TextureManager.h
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.h
 
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/GameObject.h
+Game.h
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.h
+
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Map.cpp
+Map.h
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Map.h
+TextureManager.h
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/TextureManager.h
+
+/home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Map.h
 Game.h
 /home/matti/Documenti/PROGRAMMAZIONEUNI/ProvaSDL/Game.h
 

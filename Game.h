@@ -20,11 +20,11 @@ public:
 
     bool running();
     void handleEvents();
+    static SDL_Renderer *renderer;
 private:
     int count = 0;
     bool isRunning;
     SDL_Window *window;
-    SDL_Renderer *renderer;
 };
 
 
