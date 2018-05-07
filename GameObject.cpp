@@ -4,17 +4,11 @@
 
 #include "GameObject.h"
 #include "TextureManager.h"
-GameObject::GameObject(const char *texturesheet, int x,int y,float spd): objTexture(TextureManager::LoadTexture(texturesheet)),xpos(x),ypos(y), speed(spd){
+GameObject::GameObject(char* pathSprite1,char * pathSprite2,int x,int y,int spd): pathSprite1(pathSprite1),pathSprite2(pathSprite2),xpos(x),ypos(y), speed(spd){
+   objTexture= TextureManager::LoadTexture(pathSprite1);
 }
 
 void GameObject::Update() {
-    xpos+=speed;
-    //ypos+=speed;
-    if(xpos>=500)
-        xpos=0;
-    if(ypos>=500)
-        ypos=0;
-
     srcRect.h=32;
     srcRect.w=32;
     srcRect.x=0;
@@ -24,10 +18,16 @@ void GameObject::Update() {
     destRect.y=ypos;
     destRect.w=srcRect.w*2;
     destRect.h=srcRect.h*2;
+
+    xpos+=speed;
+    if(xpos>=500)
+        xpos=0;
+    if(xpos<0)
+        xpos=500;
 }
 
 void GameObject::Render() {
-    SDL_RenderCopy(Game::renderer,objTexture,&srcRect,&destRect);
+    TextureManager::Draw(objTexture,srcRect,destRect);
 }
 
 int GameObject::getXpos() const {
@@ -38,10 +38,54 @@ int GameObject::getYpos() const {
     return ypos;
 }
 
-void GameObject::setObjTexture(SDL_Texture *objTexture) {
-    GameObject::objTexture = objTexture;
+void GameObject::setObjTexture(char* path) {
+    objTexture=TextureManager::LoadTexture(path);
 }
 
-void GameObject::setSpeed(float speed) {
+void GameObject::setSpeed(int speed) {
     GameObject::speed = speed;
+}
+
+/*void GameObject::collisionMovement(GameObject *obj,int maxdistance, int range, int shakes, bool collided) {
+    int speed_tmp = speed;
+    if(checkCollision(obj,maxdistance) && !collided) {
+        collided = true;
+        setObjTexture(pathSprite2);
+        obj->setObjTexture(obj->getPathSprite2());
+        for (int i = 0; i < shakes * 2; i++) {
+            speed = -speed;
+            for (int j = 0; j < range; j++){
+                Update();
+                Render();
+            }
+        }
+        speed = speed_tmp;
+        obj->setObjTexture(obj->getPathSprite1());
+        setObjTexture(pathSprite1);
+    }
+    else if(!checkCollision(obj,maxdistance))
+        collided = false;
+    Update();
+    obj->Update();
+    Render();
+    obj->Render();
+}*/
+
+bool GameObject::checkCollision(const GameObject *obj, int maxdistance) {
+    bool result=false;
+    if(maxdistance >= abs(xpos - obj->getXpos()))
+        result = true;
+    return result;
+}
+
+char *GameObject::getPathSprite1() const {
+    return pathSprite1;
+}
+
+char *GameObject::getPathSprite2() const {
+    return pathSprite2;
+}
+
+int GameObject::getSpeed() const {
+    return speed;
 }

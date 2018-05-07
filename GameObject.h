@@ -10,27 +10,40 @@
 class GameObject {
 
 public:
-    GameObject(const char* texturesheet,int x=0, int y=0,float speed=1);
+    GameObject(char * pathSprite1,char * pathSprite2,int x=0, int y=0,int speed=1);
+
     ~GameObject();
 
     void Update();
+
     void Render();
 
     int getXpos() const;
 
     int getYpos() const;
 
-    void setObjTexture(SDL_Texture *objTexture);
+    void setObjTexture(char * path);
 
-    void setSpeed(float speed);
+    void setSpeed(int speed);
+
+    bool checkCollision(const GameObject* obj, int maxdistance=30);
+
+    int getSpeed() const;
+
+    //void collisionMovement(GameObject* obj, int maxdistance=30, int range=15, int shakes=2,bool collided=false);
+
+    char *getPathSprite1() const;
+
+    char *getPathSprite2() const;
 
 private:
     int xpos;
     int ypos;
-    float speed;
+    int speed;
+    char* pathSprite1;
+    char* pathSprite2;
     SDL_Texture* objTexture;
     SDL_Rect srcRect,destRect;
-    SDL_Renderer* renderer;
 
 };
 

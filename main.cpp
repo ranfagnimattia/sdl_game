@@ -8,12 +8,12 @@ int main(int argc,const char* args[]) {
     Uint32 frameStart;
     float frameTime = 0;
     game= new Game();
-    game->init("Hello!",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,800,640,false);
+    game->init("Hello!",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,500,500,false);
     while (game->running()) {
         frameStart = SDL_GetTicks();
 
         game->handleEvents();
-        game->update(frameTime /60);
+        game->update();
         game->render();
         //per vedere tempo trascorso a fare render e tutto
         frameTime = SDL_GetTicks() - frameStart;

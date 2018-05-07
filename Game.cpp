@@ -12,7 +12,6 @@ Map* map;
 SDL_Renderer* Game::renderer = nullptr;
 
 bool touch;
-float accumulator = 0;
 Game::Game() {
 }
 Game::~Game() {
@@ -34,8 +33,8 @@ void Game::init(const char* title,int xpos,int ypos,int width,int height,bool fu
         isRunning = false;
 
     }
-    player = new GameObject("../images/sprite1.png",150,150);
-    enemy = new GameObject("../images/sprite2.png",100,150,2);
+    player = new GameObject(const_cast<char *>("../images/sprite1.png"), const_cast<char *>("../images/sprite3.png"), 150, 150);
+    enemy = new GameObject(const_cast<char *>("../images/sprite2.png"), const_cast<char *>("../images/sprite4.png"), 100, 150, 2);
     map= new Map();
     touch=false;
 }
@@ -54,35 +53,34 @@ void Game::handleEvents() {
     }
 }
 
-void Game::update(float dt) {
+void Game::update() {
     //map->LoadMap();
-    player->Update();
-    enemy->Update();
-    if(abs(player->getXpos()-enemy->getXpos()) <= 50 && abs(player->getYpos()-enemy->getYpos()) <= 50) {
-
-        accumulator += dt;
-        if(accumulator > 0.2){
-            player->setObjTexture(TextureManager::LoadTexture("../images/sprite3.png"));
-            enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite4.png"));
-        }
-        if(accumulator > 0.4){
-            accumulator -= 0.4;
-            player->setObjTexture(TextureManager::LoadTexture("../images/sprite1.png"));
-            enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite2.png"));
-
-        }
-        enemy->setSpeed(1);
-        player->setSpeed(0);
-    }
-    else {
-        touch=false;
-        player->setObjTexture(TextureManager::LoadTexture("../images/sprite1.png"));
-        enemy->setObjTexture(TextureManager::LoadTexture("../images/sprite2.png"));
-        player->setSpeed(1);
-        enemy->setSpeed(2);
-    }
     count++;
     std::cout << count << std::endl;
+    player->Update();
+    enemy->Update();
+    if(enemy->checkCollision(player) && !touch) {
+        touch=true;
+        enemy->setSpeed(enemy->getSpeed()*-1);
+        enemy->setObjTexture(const_cast<char *>("../images/sprite4.png"));
+        player->setObjTexture(const_cast<char *>("../images/sprite3.png"));
+        return;
+    }
+    else if(!enemy->checkCollision(player) && touch) {
+        countmove++;
+        if(countmove >= 7){
+            countmove=0;
+            touch=false;
+            enemy->setSpeed(enemy->getSpeed()*-1);
+        }
+        return;
+    }
+    else {
+        player->setObjTexture(const_cast<char *>("../images/sprite1.png"));
+        enemy->setObjTexture(const_cast<char *>("../images/sprite2.png"));
+        return;
+    }
+
 }
 
 void Game::render() {
